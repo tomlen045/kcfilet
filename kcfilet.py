@@ -436,7 +436,10 @@ def print_diff_report(rep, max_show=40):
         print("  %d 处生命周期级变化——迁移/加固是否计划内？对照 risklist 逐条签收。"
               % cnt["high"])
     elif verdict == "CLEAN":
-        print("  两份档案零差异——realm 没被任何人动过。")
+        if cnt["renamed"]:
+            print("  唯一的动静是重命名（⇄）——内容没变，只是改了名。")
+        else:
+            print("  两份档案零差异——realm 没被任何人动过。")
 
 
 # ---------------------------------------------------------------- 子命令

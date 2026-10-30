@@ -1,0 +1,19 @@
+PASS I6 相同档案 CLEAN rc=0
+PASS I2 diff 后档案 sha/mtime 不变
+PASS I4 生命周期变化 ALERT rc=1
+PASS I1 机密指纹化(新值不出现)
+PASS I1b 控制台同样指纹化
+PASS I3 报告已存在默认拒绝 rc=2
+PASS I3b --force 覆盖且新报告 0600
+PASS I5 重命名判 rename 不误报删+增
+PASS I7 截断 JSON 拒判 rc=2
+PASS I8 匿名集合按索引+声明口径
+PASS I9 台账零字段值
+PASS I9b 台账 append-only 不清史
+PASS S10 加固审计 ALERT+高危计数
+PASS S11 外观变化 rc=0 无高危
+PASS S12 新增 client 点名+ALERT
+PASS S12b lifespan 数值可读不指纹化
+PASS S13 inventory 计数正确
+PASS S14 list 清点档案
+selftest: 18/18

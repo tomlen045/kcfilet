@@ -1,0 +1,11 @@
+$ python3 kcfilet.py diff before.json after.json --report diff.json --ledger ledger.csv
+report -> diff.json (mode=0o600)
+ledger -> ledger.csv
+
+$ ls -l diff.json ledger.csv
+-rw-------@ 1 len  wheel  829 Oct 30 10:58 diff.json
+-rw-------@ 1 len  wheel  152 Oct 30 10:58 ledger.csv
+
+$ cat ledger.csv        # 台账只有 sha8 和计数，零字段值
+ts,a_sha8,b_sha8,verdict,added,removed,changed,renamed,report
+2026-10-30 10:58:47,f783e930,6e4e6489,CLEAN,0,0,0,1,demo/diff.json

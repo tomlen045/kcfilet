@@ -1,0 +1,12 @@
+$ python3 kcfilet.py inventory master-realm-20261030-104958.json
+kcfilet v1.0.0 — 档案体检
+  master-realm-20261030-104958.json
+  sha8=478a2320  63052B  叶子 1685
+  clients: account, account-console, admin-cli, broker, master-realm, security-admin-console, xh-demo-realm
+  identityProviders: (无)
+  机密类字段: 217 处（值已指纹口径管理，本工具永不展示）
+  · 匿名集合按索引对比(重命名会判为改+增): $.authenticationFlows<alias=Account verification options>.authenticationExecutions
+  · 匿名集合按索引对比(重命名会判为改+增): $.authenticationFlows<alias=Browser - Conditional 2FA>.authenticationExecutions
+  · 匿名集合按索引对比(重命名会判为改+增): $.authenticationFlows<alias=Direct Grant - Conditional OTP>.authenticationExecutions
+  · 匿名集合按索引对比(重命名会判为改+增): $.authenticationFlows<alias=First broker login - Conditional 2FA>.authenticationExecutions
+  · 匿名集合按索引对比(重命名会判为改+增): $.authenticationFlows<alias=Handle Existing Account>.authenticationExecutions

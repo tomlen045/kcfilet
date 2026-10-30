@@ -1,0 +1,48 @@
+kcfilet v1.0.0 — realm 档案差异解剖
+
+== 变更摘要 ==
+  + 33 added   - 6 removed   ~ 3 changed   <=> 0 renamed
+  高危 33 / 中危 0 / 低危 9
+
+== 高危 (必须逐条签收) ==
+  [ADD] $.clients<clientId=xh-migrator>.alwaysDisplayInConsole
+  [ADD] $.clients<clientId=xh-migrator>.attributes.backchannel.logout.revoke.offline.tokens
+  [ADD] $.clients<clientId=xh-migrator>.attributes.backchannel.logout.session.required
+  [ADD] $.clients<clientId=xh-migrator>.attributes.realm_client
+  [ADD] $.clients<clientId=xh-migrator>.bearerOnly   (仅承载校验)
+  [ADD] $.clients<clientId=xh-migrator>.clientAuthenticatorType
+  [ADD] $.clients<clientId=xh-migrator>.clientId
+  [ADD] $.clients<clientId=xh-migrator>.consentRequired   (授权确认页)
+  [ADD] $.clients<clientId=xh-migrator>.defaultClientScopes
+  [ADD] $.clients<clientId=xh-migrator>.directAccessGrantsEnabled   (密码直连授权(ROPC))
+  [ADD] $.clients<clientId=xh-migrator>.enabled   (启用开关)
+  [ADD] $.clients<clientId=xh-migrator>.frontchannelLogout   (前端通道登出)
+  [ADD] $.clients<clientId=xh-migrator>.fullScopeAllowed   (全 scope 放行)
+  [ADD] $.clients<clientId=xh-migrator>.id
+  [ADD] $.clients<clientId=xh-migrator>.implicitFlowEnabled   (隐式流程(高危遗留))
+  [ADD] $.clients<clientId=xh-migrator>.nodeReRegistrationTimeout
+  [ADD] $.clients<clientId=xh-migrator>.notBefore   (令牌吊销时间线)
+  [ADD] $.clients<clientId=xh-migrator>.optionalClientScopes
+  [ADD] $.clients<clientId=xh-migrator>.protocol
+  [ADD] $.clients<clientId=xh-migrator>.publicClient   (公开客户端(无密钥))
+  [ADD] $.clients<clientId=xh-migrator>.redirectUris
+  [ADD] $.clients<clientId=xh-migrator>.serviceAccountsEnabled   (服务账号(M2M))
+  [ADD] $.clients<clientId=xh-migrator>.standardFlowEnabled   (授权码登录流程)
+  [ADD] $.clients<clientId=xh-migrator>.surrogateAuthRequired
+  [ADD] $.clients<clientId=xh-migrator>.webOrigins
+  [DEL] $.roles.realm<name=uma_authorization>.clientRole
+  [DEL] $.roles.realm<name=uma_authorization>.composite
+  [DEL] $.roles.realm<name=uma_authorization>.containerId
+  [DEL] $.roles.realm<name=uma_authorization>.description
+  [DEL] $.roles.realm<name=uma_authorization>.id
+  [DEL] $.roles.realm<name=uma_authorization>.name
+  [CHG] $.accessTokenLifespan: 60 → 300   (访问令牌有效期)
+  [CHG] $.sslRequired: external → none   (HTTPS 强制策略)
+
+== 低危 ==
+== 口径说明 ==
+  · 匿名集合按索引对比(重命名会判为改+增): $.authenticationFlows<alias=…>…
+  · 匿名集合按索引对比(重命名会判为改+增): $.authenticationFlows<alias=…>…
+
+verdict: ALERT (rc=1)
+  33 处生命周期级变化——迁移/加固是否计划内？对照 risklist 逐条签收。

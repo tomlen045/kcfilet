@@ -1,0 +1,12 @@
+$ python3 kcfilet.py diff before.json after.json   # 只改了 IdP 的 alias，其余没动
+kcfilet v1.0.0 — realm 档案差异解剖
+
+== 变更摘要 ==
+  + 0 added   - 0 removed   ~ 0 changed   <=> 1 renamed
+  高危 0 / 中危 0 / 低危 0
+
+== 重命名 <=> (内容一致，仅名字动了) ==
+  github-sso → github-oauth   @ $.identityProviders
+
+verdict: CLEAN (rc=0)
+  唯一的动静是重命名（<=>）——内容没变，只是改了名。
