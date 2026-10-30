@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 公众号排版版.html
 article-assets/
+*cover*.py
+report.md
+shots草稿
